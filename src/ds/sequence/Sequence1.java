@@ -13,18 +13,14 @@ public class Sequence1<T> implements ISequence<T> {
 
     @Override
     public void add(int pos, T x) {
-        if (pos < 0 || pos > sequenceList.size()) {
-            return;
+        if (pos >= 0 && pos <= sequenceList.size()) {
+            sequenceList.add(pos, x);
         }
-        sequenceList.add(pos, x);
     }
 
     @Override
     public T entry(int pos) {
-        if (pos < 0 || pos >= sequenceList.size()) {
-            return null;
-        }
-        return sequenceList.get(pos);
+        return (pos < 0 || pos >= sequenceList.size()) ? null : sequenceList.get(pos);
     }
 
     @Override
@@ -34,9 +30,6 @@ public class Sequence1<T> implements ISequence<T> {
 
     @Override
     public T remove(int pos) {
-        if (pos < 0 || pos >= sequenceList.size()) {
-            return null;
-        }
-        return sequenceList.remove(pos);
+        return (pos < 0 || pos >= sequenceList.size()) ? null : sequenceList.remove(pos);
     }
 }

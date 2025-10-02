@@ -21,10 +21,12 @@ public class Sequence2<T> implements ISequence<T> {
 
     @Override
     public T entry(int pos) {
-        if (pos < 0 || pos >= sequenceList.size()) {
-            return null;
-        }
-        return sequenceList.get(pos);
+        return (pos < 0 || pos >= sequenceList.size()) ? null : sequenceList.get(pos);
+    }
+
+    @Override
+    public T remove(int pos) {
+        return (pos < 0 || pos >= sequenceList.size()) ? null : sequenceList.remove(pos);
     }
 
     @Override
@@ -32,11 +34,4 @@ public class Sequence2<T> implements ISequence<T> {
         return sequenceList.size();
     }
 
-    @Override
-    public T remove(int pos) {
-        if (pos < 0 || pos >= sequenceList.size()) {
-            return null;
-        }
-        return sequenceList.remove(pos);
-    }
 }
