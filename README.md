@@ -1,7 +1,7 @@
 # Java Data Structures Library
 
-A comprehensive collection of **custom Java data structure implementations** designed for learning, experimentation, and testing fundamental abstract data types (ADTs).  
-This project includes multiple implementations of each interface, showcasing different design strategies and underlying data structures.
+A comprehensive collection of custom Java data structure implementations built for learning, experimentation, and testing of core abstract data types (ADTs).
+Each interface includes multiple implementations, demonstrating different design approaches and internal data structures.
 
 ---
 
@@ -45,7 +45,9 @@ ds/
   ├── ITree.java // Tree Interface
   ├── Node.java // Tree Node Structure
   ├── BinaryTree.java // Level-Order Binary Tree
-  └── BinarySearchTree.java // Ordered Binary Search Tree
+  ├── BinarySearchTree.java // Ordered Binary Search Tree
+  ├── AVLTree.java // Self-Balancing Tree (Height-Based)
+  └── RedBlackTree.java // Self-Balancing Tree (Color-Based)
 ````
 
 ---
